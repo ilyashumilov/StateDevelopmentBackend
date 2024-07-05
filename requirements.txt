@@ -1,3 +1,4 @@
 fastapi
 uvicorn
 pyTelegramBotAPI
+pydantic-settings
