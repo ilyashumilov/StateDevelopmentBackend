@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: api
     ports:
       - "8000:8000"
     networks:
@@ -12,6 +13,7 @@ services:
 
   nginx:
     image: nginx:latest
+    container_name: nginx
     ports:
       - "80:80"
     volumes:
@@ -20,6 +22,15 @@ services:
       - app
     networks:
       - fastapi_network
+
+  ngrok:
+    image: wernight/ngrok
+    container_name: ngrok
+    ports:
+      - "4040:4040"
+    env_file:
+      - .env
+    command: ngrok http nginx:80
 
 networks:
   fastapi_network:
