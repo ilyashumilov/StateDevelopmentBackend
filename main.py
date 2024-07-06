@@ -39,11 +39,11 @@ def welcome(message):
                 text='Присоединиться к сообществу', url='https://t.me/UnitedVibesBot/vibe'
             )
         )
-        # markup.add(
-        #     telebot.types.InlineKeyboardButton(
-        #         text='Начать!', url='http://localhost:3000'
-        #     )
-        # )
+        markup.add(
+            telebot.types.InlineKeyboardButton(
+                text='Начать!', url='http://194.87.147.84:3000'
+            )
+        )
         bot.send_photo(message.chat.id, photo, reply_markup=markup)
 
 @bot.callback_query_handler(func=lambda call: True)
