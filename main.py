@@ -20,13 +20,31 @@ async def telegram_webhook(request: Request):
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
-    markup = telebot.types.InlineKeyboardMarkup()
-    markup.add(
-        telebot.types.InlineKeyboardButton(
-            text='Начать!', url='https://t.me/UnitedVibesBot/vibe'
+    photo_path = 'statics/welcome_image.jpeg'
+    with open(photo_path, 'rb') as photo:
+        logger.error('asldfhalksdnflknlasdflm;mas;ldfm;lmas;ldfm')
+        markup = telebot.types.InlineKeyboardMarkup()
+        markup.add(
+            telebot.types.InlineKeyboardButton(
+                text='Дорожная карта', url='https://t.me/UnitedVibesBot/vibe'
+            )
         )
-    )
-    bot.send_message(message.chat.id, 'Правила игры: {}'.format(rools_text), reply_markup=markup)
+        markup.add(
+            telebot.types.InlineKeyboardButton(
+                text='Как играть', url='https://t.me/UnitedVibesBot/vibe'
+            )
+        )
+        markup.add(
+            telebot.types.InlineKeyboardButton(
+                text='Присоединиться к сообществу', url='https://t.me/UnitedVibesBot/vibe'
+            )
+        )
+        # markup.add(
+        #     telebot.types.InlineKeyboardButton(
+        #         text='Начать!', url='http://localhost:3000'
+        #     )
+        # )
+        bot.send_photo(message.chat.id, photo, reply_markup=markup)
 
 @bot.callback_query_handler(func=lambda call: True)
 def button_click(call):
