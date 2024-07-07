@@ -1,0 +1,25 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    max-width: 100%; /* Set the maximum width of the image to 100% of the container */
+    max-height: 100%; /* Set the maximum height of the image to 100% of the container */
+}
+button {
+    position: absolute;
+    bottom: 10%; /* Position the button at the bottom of the container */
+    left: 50%; /* Position the button in the horizontal center */
+    transform: translateX(-50%); /* Center the button horizontally */
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}

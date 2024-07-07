@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-//import '../styles/LoginComponent.css'; // Import CSS for styling
+import '../styles/DescriptionComponent.css';
 
 const DescriptionComponent = ({ onDescription }) => {
     return (
-    <div>
+    <div class="container">
       <button onClick={onDescription}>Дальше</button>
       <img src={`/images/description_image.jpeg`}/>
     </div>
