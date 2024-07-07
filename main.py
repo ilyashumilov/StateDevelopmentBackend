@@ -42,7 +42,7 @@ def welcome(message):
         )
         markup.add(
             telebot.types.InlineKeyboardButton(
-                text='Начать!', url='http://194.87.147.84:3000'
+                text='Начать!', url='https://t.me/UnitedVibesBot/vibe'
             )
         )
         bot.send_photo(message.chat.id, photo, reply_markup=markup)
