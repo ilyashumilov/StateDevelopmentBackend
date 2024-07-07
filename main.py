@@ -31,7 +31,8 @@ def welcome(message):
         )
         markup.add(
             telebot.types.InlineKeyboardButton(
-                text='Как играть', url='https://t.me/UnitedVibesBot/vibe'
+                text='Как играть',
+                url='https://sticky-salamander-3e6.notion.site/8ae201943c634ecab10b056f809fe10d?pvs=4'
             )
         )
         markup.add(
