@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import WelcomeComponent from './components/WelcomeComponent';
 import DescriptionComponent from './components/DescriptionComponent';
 import HealthComponent from './components/HealthComponent';
 import MoneyComponent from './components/MoneyComponent';
 
+
+const tele = window.Telegram.WebApp;
+
+
 const App = () => {
+
+  useEffect(() => {
+    tele.ready();
+  });
+
   const [currentState, setCurrentState] = useState('Welcome');
   const [counter, setCounter] = useState(0); // Step 1: Add a counter state variable
 
