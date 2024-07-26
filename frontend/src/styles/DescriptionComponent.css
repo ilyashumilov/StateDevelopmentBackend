@@ -1,17 +1,24 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 .container {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-img {
-    max-width: 100%; /* Set the maximum width of the image to 100% of the container */
-    max-height: 100%; /* Set the maximum height of the image to 100% of the container */
+
+.background {
+    width: 120%; /* Set the width of the image to 100% of the container */
+    height: 120%; /* Set the height of the image to 100% of the container */
 }
+
 button {
     position: absolute;
     bottom: 10%; /* Position the button at the bottom of the container */
@@ -22,4 +29,5 @@ button {
     padding: 10px 20px;
     border: 1px solid #000000;
     border-radius: 5px;
+    cursor: pointer; /* Add a pointer cursor to the button */
 }

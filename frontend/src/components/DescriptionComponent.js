@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/DescriptionComponent.css';
 
 const DescriptionComponent = ({ onDescription }) => {
     return (
-    <div class="container">
-      <button onClick={onDescription}>Дальше</button>
-      <img src={`/images/description_image.jpeg`}/>
-    </div>
-  );
+        <div className="container">
+            <button onClick={onDescription}>Дальше</button>
+            <img src={`/images/description_image.jpeg`} alt="Description" class='background'/>
+        </div>
+    );
 };
 
 export default DescriptionComponent;
