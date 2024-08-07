@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import '../styles/MoneyComponent.css';
+import '../styles/JoyComponent.css';
 
-const MoneyComponent = ({ counter, incrementCounter, onMoney }) => {
+const JoyComponent = ({ counter, incrementCounter, onJoy }) => {
     return (
         <div class="container">
-          <button onClick={onMoney}>Дальше</button>
+          <button onClick={onJoy}>Дальше</button>
           <img class='countericon' src={`/images/coin_image.png`}/>
           <p class='counter'>{counter}</p>
           <img class='background' src={`/images/background_image.jpeg`}/>
-          <img class='coin' src={`/images/money_image.png`} onClick={incrementCounter}/>
+          <img class='coin' src={`/images/joy_image.png`} onClick={incrementCounter}/>
         </div>
     );
 };
 
-export default MoneyComponent;
+export default JoyComponent;
